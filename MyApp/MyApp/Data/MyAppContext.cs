@@ -11,7 +11,7 @@ namespace MyApp.Data
         }
 
         // đại diện cho một bảng trong database.
-        protected DbSet<Item> Items { get; set; }
+        public DbSet<Item> Items { get; set; }
 
 
     }

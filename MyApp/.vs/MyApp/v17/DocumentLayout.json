@@ -3,12 +3,16 @@
   "WorkspaceRootPath": "E:\\Project\\ASP.NET-Core-Learning\\MyApp\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{8A1CE2ED-ABD0-4ABC-B3CF-A36C5735A4FD}|MyApp\\MyApp.csproj|e:\\project\\asp.net-core-learning\\myapp\\myapp\\data\\myappcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8A1CE2ED-ABD0-4ABC-B3CF-A36C5735A4FD}|MyApp\\MyApp.csproj|solutionrelative:myapp\\data\\myappcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8A1CE2ED-ABD0-4ABC-B3CF-A36C5735A4FD}|MyApp\\MyApp.csproj|e:\\project\\asp.net-core-learning\\myapp\\myapp\\controllers\\itemscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8A1CE2ED-ABD0-4ABC-B3CF-A36C5735A4FD}|MyApp\\MyApp.csproj|solutionrelative:myapp\\controllers\\itemscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8A1CE2ED-ABD0-4ABC-B3CF-A36C5735A4FD}|MyApp\\MyApp.csproj|e:\\project\\asp.net-core-learning\\myapp\\myapp\\models\\item.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8A1CE2ED-ABD0-4ABC-B3CF-A36C5735A4FD}|MyApp\\MyApp.csproj|solutionrelative:myapp\\models\\item.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8A1CE2ED-ABD0-4ABC-B3CF-A36C5735A4FD}|MyApp\\MyApp.csproj|e:\\project\\asp.net-core-learning\\myapp\\myapp\\views\\items\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8A1CE2ED-ABD0-4ABC-B3CF-A36C5735A4FD}|MyApp\\MyApp.csproj|solutionrelative:myapp\\views\\items\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,7 +22,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 9,
           "Children": [
             {
               "$type": "Bookmark",
@@ -56,22 +60,35 @@
               "RelativeDocumentMoniker": "MyApp\\Models\\Item.cs",
               "ToolTip": "E:\\Project\\ASP.NET-Core-Learning\\MyApp\\MyApp\\Models\\Item.cs",
               "RelativeToolTip": "MyApp\\Models\\Item.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAvAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-03T18:06:39.51Z",
+              "WhenOpened": "2026-06-05T09:40:11.611Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "E:\\Project\\ASP.NET-Core-Learning\\MyApp\\MyApp\\Views\\Items\\Create.cshtml",
+              "RelativeDocumentMoniker": "MyApp\\Views\\Items\\Create.cshtml",
+              "ToolTip": "E:\\Project\\ASP.NET-Core-Learning\\MyApp\\MyApp\\Views\\Items\\Create.cshtml",
+              "RelativeToolTip": "MyApp\\Views\\Items\\Create.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-06-04T18:09:49.83Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "MyAppContext.cs",
-              "DocumentMoniker": "E:\\Project\\ASP.NET-Core-Learning\\MyApp\\MyApp\\Data\\MyAppContext.cs",
-              "RelativeDocumentMoniker": "MyApp\\Data\\MyAppContext.cs",
-              "ToolTip": "E:\\Project\\ASP.NET-Core-Learning\\MyApp\\MyApp\\Data\\MyAppContext.cs",
-              "RelativeToolTip": "MyApp\\Data\\MyAppContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAwAAAAAAAAAA==",
+              "Title": "ItemsController.cs",
+              "DocumentMoniker": "E:\\Project\\ASP.NET-Core-Learning\\MyApp\\MyApp\\Controllers\\ItemsController.cs",
+              "RelativeDocumentMoniker": "MyApp\\Controllers\\ItemsController.cs",
+              "ToolTip": "E:\\Project\\ASP.NET-Core-Learning\\MyApp\\MyApp\\Controllers\\ItemsController.cs",
+              "RelativeToolTip": "MyApp\\Controllers\\ItemsController.cs",
+              "ViewState": "AgIAACYAAAAAAAAAAAAIwDkAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-03T17:41:49.032Z",
+              "WhenOpened": "2026-06-04T18:08:12.873Z",
               "EditorCaption": ""
             }
           ]

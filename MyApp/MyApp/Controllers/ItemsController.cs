@@ -1,19 +1,61 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using MyApp.Data;
 using MyApp.Models;
+
 
 namespace MyApp.Controllers
 {
     public class ItemsController : Controller
     {
-        public IActionResult Overview()
+        // Khai báo biến _context để làm việc với Database thông qua Entity Framework Core.
+        // readonly Chỉ được gán giá trị một lần trong constructor.
+        private readonly MyAppContext _context;
+
+        public ItemsController(MyAppContext context)
         {
-            var item = new Item() { Name = "keyboard" };
+            _context = context;
+        }
+
+        // Hiển thị ds sản phẩm
+        public async Task<IActionResult> Index()
+        {
+            // Truyền danh sách các Item từ database vào view để hiển thị.
+            var item = await _context.Items.ToListAsync();
             return View(item);
         }
 
-        public IActionResult Edit(int itemId)
+        // Hiển thị trang thêm các sản phẩm
+        public IActionResult Create()
         {
-            return Content("id = " + itemId);
+            return View();
+        }
+
+        // Thêm sản phẩm vào database
+        /* [Bind("Id", "Name", "Price")]: chỉ định những thuộc tính được nhận từ form 
+         và gán vào đối tượng Item khi form được submit. */
+        [HttpPost]
+        public async Task<IActionResult> Create([Bind("Id", "Name", "Price")] Item item)
+        {
+            // kta dữ liệu ở phần Models -> Item.cx
+            if(ModelState.IsValid)
+            {
+                _context.Items.Add(item);
+                await _context.SaveChangesAsync();
+
+                // nếu thành công thì chuyển sang trang index (ds sản phẩm)
+                return RedirectToAction("Index");
+            }
+            // nếu ko hợp lệ thì Hiển thị lại form Create và giữ nguyên dữ liệu người dùng đã nhập.
+            return View(item);
+        }
+
+        // Sửa sản phẩm
+        [HttpGet]
+        public async Task<IActionResult> Edit(int id)
+        {
+            Item item = await _context.Items.FindAsync(id);
+            return View(item);
         }
     }
 }
