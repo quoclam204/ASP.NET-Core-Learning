@@ -10,7 +10,7 @@ namespace MyApp.Data
 
         }
 
-        // đại diện cho một bảng trong database.
+        // Đại diện cho một bảng trong database.
         public DbSet<Item> Items { get; set; }
 
 
