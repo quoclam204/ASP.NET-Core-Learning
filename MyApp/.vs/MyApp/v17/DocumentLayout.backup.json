@@ -3,10 +3,6 @@
   "WorkspaceRootPath": "E:\\Project\\ASP.NET-Core-Learning\\MyApp\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{8A1CE2ED-ABD0-4ABC-B3CF-A36C5735A4FD}|MyApp\\MyApp.csproj|e:\\project\\asp.net-core-learning\\myapp\\myapp\\views\\items\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{8A1CE2ED-ABD0-4ABC-B3CF-A36C5735A4FD}|MyApp\\MyApp.csproj|solutionrelative:myapp\\views\\items\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{8A1CE2ED-ABD0-4ABC-B3CF-A36C5735A4FD}|MyApp\\MyApp.csproj|e:\\project\\asp.net-core-learning\\myapp\\myapp\\views\\items\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{8A1CE2ED-ABD0-4ABC-B3CF-A36C5735A4FD}|MyApp\\MyApp.csproj|solutionrelative:myapp\\views\\items\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
@@ -22,7 +18,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 9,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Bookmark",
@@ -54,41 +50,28 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "Index.cshtml",
               "DocumentMoniker": "E:\\Project\\ASP.NET-Core-Learning\\MyApp\\MyApp\\Views\\Items\\Index.cshtml",
               "RelativeDocumentMoniker": "MyApp\\Views\\Items\\Index.cshtml",
-              "ToolTip": "E:\\Project\\ASP.NET-Core-Learning\\MyApp\\MyApp\\Views\\Items\\Index.cshtml",
-              "RelativeToolTip": "MyApp\\Views\\Items\\Index.cshtml",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABcAAAAhAAAAAAAAAA==",
+              "ToolTip": "E:\\Project\\ASP.NET-Core-Learning\\MyApp\\MyApp\\Views\\Items\\Index.cshtml*",
+              "RelativeToolTip": "MyApp\\Views\\Items\\Index.cshtml*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAALAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-06-07T17:02:41.745Z",
+              "WhenOpened": "2026-06-09T11:17:28.375Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "ItemsController.cs",
               "DocumentMoniker": "E:\\Project\\ASP.NET-Core-Learning\\MyApp\\MyApp\\Controllers\\ItemsController.cs",
               "RelativeDocumentMoniker": "MyApp\\Controllers\\ItemsController.cs",
               "ToolTip": "E:\\Project\\ASP.NET-Core-Learning\\MyApp\\MyApp\\Controllers\\ItemsController.cs",
               "RelativeToolTip": "MyApp\\Controllers\\ItemsController.cs",
-              "ViewState": "AgIAAFcAAAAAAAAAAAAmwGkAAAAsAAAAAAAAAA==",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABkAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-04T18:08:12.873Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Delete.cshtml",
-              "DocumentMoniker": "E:\\Project\\ASP.NET-Core-Learning\\MyApp\\MyApp\\Views\\Items\\Delete.cshtml",
-              "RelativeDocumentMoniker": "MyApp\\Views\\Items\\Delete.cshtml",
-              "ToolTip": "E:\\Project\\ASP.NET-Core-Learning\\MyApp\\MyApp\\Views\\Items\\Delete.cshtml",
-              "RelativeToolTip": "MyApp\\Views\\Items\\Delete.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-06-07T15:05:04.252Z",
+              "WhenOpened": "2026-06-09T10:55:42.023Z",
               "EditorCaption": ""
             }
           ]

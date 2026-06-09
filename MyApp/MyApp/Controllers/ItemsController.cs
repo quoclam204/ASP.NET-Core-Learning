@@ -21,7 +21,7 @@ namespace MyApp.Controllers
         public async Task<IActionResult> Index()
         {
             // Truyền danh sách các Item từ database vào view để hiển thị.
-            var item = await _context.Items.ToListAsync();
+            var item = await _context.Items.Include(s => s.SerialNumber).ToListAsync();
             return View(item);
         }
 

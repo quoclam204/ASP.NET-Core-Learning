@@ -6,7 +6,7 @@ namespace MyApp.Models
     public class SerialNumber
     {
         public int Id { get; set; }
-        public string Number { get; set; } = null!;
+        public string Name { get; set; } = null!;
 
         // Thiết lập quan hệ với Item
         public Item? Item { get; set; } 
