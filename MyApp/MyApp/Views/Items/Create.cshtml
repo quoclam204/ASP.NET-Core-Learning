@@ -7,14 +7,25 @@
 <h3>Create an item</h3>
 
 <form asp-action="Create" method="post">
-    <div class="from-group">
+    <div class="form-group">
         <label for="Name">Name</label>
-        <input type="text" class="form-control" asp-for="Name"/>
+        <input type="text" class="form-control" asp-for="Name" />
     </div>
 
-    <div class="from-group">
+    @* asp-for="Price" -> "Ô input này dùng để nhập dữ liệu cho thuộc tính Price trong Model." *@
+    <div class="form-group">
         <label for="Price">Price</label>
         <input type="number" class="form-control" asp-for="Price" />
+    </div>
+
+    <div class="form-group">
+        <label for="SerialNumber">SerialNumber</label>
+        <input type="text" class="form-control" asp-for="SerialNumber.Name" />
+    </div>
+
+    <div class="form-group">
+        <label for="CategoryId">Category</label>
+        <select asp-for="CategoryId" asp-items="ViewBag.Categories" class="form-control"></select>
     </div>
 
     <button type="submit" class="btn btn-primary">Submit</button>

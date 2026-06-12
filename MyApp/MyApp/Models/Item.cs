@@ -16,5 +16,11 @@
         // Một Item có thể có một SerialNumber, nhưng cũng có thể không có (null).
         // Đây là đối tượng SerialNumber liên kết với Item, cho phép truy cập thông tin số seri của sản phẩm.
         public SerialNumber? SerialNumber { get; set; } 
+
+        // Một sản phẩm chỉ thuộc về 1 danh mục đó
+        public int? CategoryId { get; set; }
+        public Category? Category { get; set; }
+
+        public List<ItemClient>? ItemClients { get; set; }
     }
 }

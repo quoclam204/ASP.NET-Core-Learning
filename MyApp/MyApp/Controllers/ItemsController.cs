@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using MyApp.Data;
 using MyApp.Models;
@@ -21,21 +22,30 @@ namespace MyApp.Controllers
         public async Task<IActionResult> Index()
         {
             // Truyền danh sách các Item từ database vào view để hiển thị.
-            var item = await _context.Items.Include(s => s.SerialNumber).ToListAsync();
+            // ThenInclude: load tiếp (eager loading) các Navigation Property ở cấp sâu hơn.
+            var item = await _context.Items.Include(s => s.SerialNumber)
+                                           .Include(c => c.Category)
+                                           .Include(ic => ic.ItemClients)
+                                           .ThenInclude(c => c.Client)
+                                           .ToListAsync();
             return View(item);
         }
 
         // Hiển thị trang thêm các sản phẩm
         public IActionResult Create()
         {
+            // Lấy các danh mục có trong database
+            // Chuyển chúng thành danh sách lựa chọn (dropdown). và hiển thị lên view tạo sản phẩm
+            // SelectList dùng để tạo dữ liệu cho thẻ <select> (dropdown).
+            ViewData["Categories"] = new SelectList(_context.Categories, "Id", "Name");
             return View();
         }
 
-        // Thêm sản phẩm vào database
+        // Thêm sản phẩm vào database       
         /* [Bind("Id", "Name", "Price")]: chỉ định những thuộc tính được nhận từ form 
          và gán vào đối tượng Item khi form được submit. */
         [HttpPost]
-        public async Task<IActionResult> Create([Bind("Id", "Name", "Price")] Item item)
+        public async Task<IActionResult> Create([Bind("Id, Name, Price, CategoryId, SerialNumber")] Item item)
         {
             // kta dữ liệu ở phần Models -> Item.cx
             if(ModelState.IsValid)
@@ -55,12 +65,15 @@ namespace MyApp.Controllers
         // Hiển thị dữ liệu sẵn trên form
         public async Task<IActionResult> Edit(int id)
         {
-            var item = await _context.Items.FirstOrDefaultAsync(x => x.Id == id);
+            // Hiện dữ liệu trong dropdown
+            ViewData["Categories"] = new SelectList(_context.Categories, "Id", "Name");
+
+            var item = await _context.Items.Include(i => i.SerialNumber).FirstOrDefaultAsync(x => x.Id == id);
             return View(item);
         }
 
         [HttpPost]
-        public async Task<IActionResult> Edit(int id, [Bind("Id", "Name", "Price")] Item item)
+        public async Task<IActionResult> Edit(int id, [Bind("Id, Name, Price, CategoryId, SerialNumber")] Item item)
         {
             if (id != item.Id)
             {
@@ -77,18 +90,6 @@ namespace MyApp.Controllers
 
             return View(item);
         }
-
-        //public async Task<IActionResult> Delete(int id, [Bind("Id", "Name", "Price")] Item item)
-        //{
-        //    if (id == item.Id)
-        //    {
-        //        _context.Items.Remove(item);
-        //        await _context.SaveChangesAsync();
-        //        return RedirectToAction("Index");
-        //    }
-
-        //    return View(item);
-        //}
 
         [HttpGet]
         public async Task<IActionResult> Delete(int id)
